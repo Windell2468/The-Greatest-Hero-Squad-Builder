@@ -2,7 +2,7 @@
 
 Submitted by: **Jerry Rogers Jr**
 
-This web app: **is when a user type your favorite heros in Marvel, DC, Anime, or Game Characters. It allows users to put name, universe, power level, role, and description.**
+This web app: **is when a user types their favorite heroes in Marvel, DC, Anime, or Game Characters. It allows users to put a name, a universe, a power level, a role, and a description**
 
 Time spent: **9** hours spent in total
 
@@ -49,7 +49,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='Project 7 - The Greatest Hero Squad Builder .gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
