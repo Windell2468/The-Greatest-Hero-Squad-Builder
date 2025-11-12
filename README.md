@@ -2,7 +2,7 @@
 
 Submitted by: **Jerry Rogers Jr**
 
-This web app: **is when a user types their favorite heroes in Marvel, DC, Anime, or Game Characters. It allows users to put a name, a universe, a power level, a role, and a description**
+This web app: **allows user types their favorite heroes in Marvel, DC, Anime, or Game Characters. It allows users to put a name, a universe, a power level, a role, and a description**
 
 Time spent: **9** hours spent in total
 
@@ -31,13 +31,13 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-- [ ] A crewmate can be given a category upon creation which restricts their attribute value options
+- [ x] A crewmate can be given a category upon creation which restricts their attribute value options
   - e.g., a Dungeons and Dragons class or a development team role (project manager, product owner, etc.)
   - User can choose a `category` option to describe their crewmate before any attributes are specified
   - Based on the category value, users are allowed to access only a subset of the possible attributes
-- [ ] A section of the summary page, displays summary statistics about a user’s crew on their crew page
+- [x ] A section of the summary page, displays summary statistics about a user’s crew on their crew page
   - e.g., the percent of members with a certain attribute 
-- [ ] The summary page displays a custom “success” metric about a user’s crew which changes the look of the crewmate list
+- [ x] The summary page displays a custom “success” metric about a user’s crew which changes the look of the crewmate list
   - e.g., a pirate crew’s predicted success at commandeering a new galley
 
 

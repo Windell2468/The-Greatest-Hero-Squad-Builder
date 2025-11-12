@@ -45,7 +45,11 @@ function EditHero() {
       .eq("id", id);
 
     if (error) console.error("Update failed:", error);
-    else navigate("/gallery");
+    else {
+  navigate("/gallery");
+  window.location.reload();
+}
+
   };
 
   // Delete hero

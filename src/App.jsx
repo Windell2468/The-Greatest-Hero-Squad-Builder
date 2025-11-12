@@ -1,6 +1,6 @@
-import { Routes, Route, Link } from "react-router-dom";
-import CreateHero from "./pages/CreateHero";
-import Gallery from "./pages/Gallery";
+import { Routes, Route, Link } from "react-router-dom"; // React Router components routing
+import CreateHero from "./pages/CreateHero"; 
+import Gallery from "./pages/Gallery"; 
 import Detail from "./pages/Detail";
 import EditHero from "./pages/EditHero";
 
@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <nav className="sidebar">
-        <h2>🦸‍♂️ Heros Squad Builder</h2>
+        <h2>🕸️🦸‍♂️ Greatest Heros Squad Builder🥷🍄</h2>
         <ul>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/create">Create Hero</Link></li>
@@ -24,7 +24,7 @@ function App() {
             path="/"
             element={
               <div className="home">
-                <h1>Welcome to the Hero Squad Creator!</h1>
+                <h1>Welcome to the Gretest Hero Squad Creator!</h1>
                 <p>
                   Build your ultimate team of heroes from your favorite universes.
                   You can create, view, edit, and delete your custom heroes!

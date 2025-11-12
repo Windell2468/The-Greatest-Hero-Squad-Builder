@@ -3,19 +3,20 @@ import { supabase } from "../client";
 
 function CreateHero() {
   const [hero, setHero] = useState({
+    // Define initial state for the hero form using useState
     name: "",
     universe: "",
     power_level: "",
     role: "",
     description: "",
   });
-
+  // This function to handle  form of submission and insert new hero into the database
   const createHero = async (event) => {
-  event.preventDefault();
-  console.log("Submitting hero:", hero); // 👈 add this line
-
+  event.preventDefault(); // It prevents the default  form reload behavior
+  console.log("Submitting hero:", hero); // Log hero data for debugging
+// It insert a new hero record into the "Heros" table in Supabase
   const { data, error } = await supabase
-    .from("Heros")
+    .from("Heros") //This table name in Supabase
     .insert({
       name: hero.name,
       universe: hero.universe,
@@ -24,12 +25,12 @@ function CreateHero() {
       description: hero.description,
     })
     .select();
-
+// It checks for any database errors
   if (error) {
-    console.error("Insert error:", error); // 👈 catch issues here
+    console.error("Insert error:", error); // Log errors if insertion fails
   } else {
-    console.log("Inserted data:", data);
-    window.location = "/gallery";
+    console.log("Inserted data:", data); // Log sucess response 
+    window.location = "/gallery"; // Redirect user to gallery page after successful creation
   }
 };
 

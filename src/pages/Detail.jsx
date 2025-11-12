@@ -1,25 +1,20 @@
-import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useParams, Link } from "react-router-dom";
 import { supabase } from "../client";
-
-function Detail() {
+// The components to display details of a single hero
+export default function Detail() {
   const { id } = useParams();
+  // Get an "id" parameter from the route
   const [hero, setHero] = useState(null);
 
   useEffect(() => {
-    const fetchHero = async () => {
-      const { data } = await supabase
-        .from("Heros")
-        .select()
-        .eq("id", id)
-        .single();
-      setHero(data);
-    };
-
-    fetchHero();
+    (async () => {
+      const { data, error } = await supabase.from("Heros").select().eq("id", id).single();
+      if (!error) setHero(data);
+    })();
   }, [id]);
 
-  if (!hero) return <p>Loading hero...</p>;
+  if (!hero) return <p>Loading hero details...</p>;
 
   return (
     <div className="hero-detail">
@@ -27,9 +22,11 @@ function Detail() {
       <p><strong>Universe:</strong> {hero.universe}</p>
       <p><strong>Power Level:</strong> {hero.power_level}</p>
       <p><strong>Role:</strong> {hero.role}</p>
-      <p>{hero.description}</p>
+      <p><strong>Description:</strong> {hero.description}</p>
+      <p><strong>Created At:</strong> {new Date(hero.created_at).toLocaleString()}</p>
+      <Link to={`/edit/${hero.id}`}>✏️ Edit this Hero</Link>
+      <Link to="/gallery">← Back to Gallery</Link>
+
     </div>
   );
 }
-
-export default Detail;
